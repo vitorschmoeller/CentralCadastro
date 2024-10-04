@@ -20,10 +20,6 @@ export const authOptions: AuthOptions = {
     ],
     //Propriedade que permite criar funções de retorno de chamada 
     callbacks: {
-        async redirect({url, baseUrl}){
-            return baseUrl + "/dashboard"
-        },
-
         async session({session, token, user}){
             
             session.user = {...session.user, id: user.id} as {
