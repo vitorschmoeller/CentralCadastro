@@ -185,7 +185,7 @@ export default function Search(){
                         </div>
                     ): (
                         <div className="flex items-center">
-                            <label htmlFor="filter" className="text-[18px] font-medium mr-2">Critério do filtro: </label>
+                            <label htmlFor="filter" className="text-[18px] font-medium mr-2">Filtrar por: </label>
                             <select onChange={(event) => setSearchCriteria(event.target.value)} className="py-2 px-4 bg-slate-100 border-2 rounded" name="filter" id="filter">
                                 <option value="name">Nome do produto</option>
                                 <option value="code">Código Ean</option>

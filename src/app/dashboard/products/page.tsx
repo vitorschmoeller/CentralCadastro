@@ -18,7 +18,7 @@ export default async function Products(){
         const marks = await prismaClient.mark.findMany()
         
     return(
-        <main className="mt-9 mb-2">
+        <main className="mt-9 mb-2 ">
             <Container>
                 <div className="flex items-center justify-between">
                     <h1 className="text-3xl font-bold">Produtos cadastrados</h1>
@@ -31,13 +31,13 @@ export default async function Products(){
                     </div>
                 </div>
 
-                <table className="min-w-full my-2">
+                <table className="min-w-full my-2 ">
                     <thead>
                         <tr className="flex-1">
                             <th className="font-medium text-left pl-1 ">Código EAN</th>
                             <th className="font-medium text-left pl-1 ">Nome</th>
                             <th className="font-medium text-left pl-1 ">Marca</th>
-                            <th className="font-medium text-left pl-1 ">Data do Casdatro</th>
+                            <th className="font-medium text-left pl-1 hidden sm:block">Data do Casdatro</th>
                             <th className="font-medium text-left pl-1">Preço</th>
                             <th className="font-medium text-left pl-1">#</th>
                         </tr>

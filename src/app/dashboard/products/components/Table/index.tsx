@@ -93,7 +93,7 @@ export const Table = ({mark, product, marks}: ProductItem) => {
                 <td className="text-left pl-1">
                     {isEditing ? (
                         <input
-                            className="border-gray-300 border-2 pl-1"
+                            className="border-gray-300 border-2 pl-1  sm:w-[250px] "
                             type="text" 
                             name="code"
                             value={editableProduct.code}
@@ -109,7 +109,7 @@ export const Table = ({mark, product, marks}: ProductItem) => {
                     
                     {isEditing ? (
                         <input
-                            className="border-gray-300 border-2 w-[80%] pl-1"
+                            className="border-gray-300 border-2 w-[130px] pl-1 sm:w-[250px]"
                             type="text"
                             name="name"
                             value={editableProduct.name}
@@ -121,7 +121,7 @@ export const Table = ({mark, product, marks}: ProductItem) => {
                     )}
                     
                 </td>
-                <td className="text-left pl-1">
+                <td className="text-left pl-1 w-[111px] ">
                     {isEditing ? (
                         <select 
                             name="markId" 
@@ -138,12 +138,12 @@ export const Table = ({mark, product, marks}: ProductItem) => {
                         mark?.name
                     )}
                 </td>
-                <td className="text-left pl-1">{product.createdAt.toLocaleDateString("pt-BR")}</td>
+                <td className="text-left pl-1 hidden sm:table-cell">{product.createdAt.toLocaleDateString("pt-BR")}</td>
                 <td className="text-left pl-1">
                     {isEditing ? (
                         <>
                             <input
-                                className="border-gray-300 border-2 pl-1"
+                                className="border-gray-300 border-2 pl-1 w-[50px] sm:w-[100px]"
                                 type="number" 
                                 name="price"
                                 value={editableProduct.price}
