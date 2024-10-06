@@ -11,7 +11,7 @@ export default function Home() {
         src={hero}
         alt="Imagem Hero"
         width={600}
-        className="max-w-lg md:max-w-xl w-[460px] sm:w-[600px]"
+        className="max-w-lg md:max-w-xl w-[320px] sm:w-[600px]"
         priority={true}
       />
     </main>
