@@ -160,13 +160,13 @@ export default function Search(){
     return(
         <div >
             <Container>
-                <div className="w-full flex items-center justify-between  ">
-                    <div className="flex items-center">
+                <div className="w-full flex items-center justify-between  flex-col sm:flex-row">
+                    <div className="flex w-full  items-center">
                         <Link href="/dashboard" className="py-2 px-4 bg-gray-900 text-white rounded mr-3">Voltar</Link>
-                        <h1 className="text-2xl">Procurar produto</h1>
+                        <h1 className="text-xl sm:text-2xl">Procurar produto</h1>
                     </div>
                     {product ? (
-                        <div className="flex items-center gap-3">
+                        <div className="mt-4 flex items-center gap-3 w-full justify-between">
                             <button
                                 className="py-2 px-4 bg-green-500 rounded"
                                 title="refresh" 
@@ -185,7 +185,7 @@ export default function Search(){
                         </div>
                     ): (
                         <div className="flex items-center">
-                            <label htmlFor="filter" className="text-[18px] font-medium mr-2">Filtrar por: </label>
+                            <label htmlFor="filter" className="text-[14px] font-medium mr-2 sm:text-[18px]">Filtrar por: </label>
                             <select onChange={(event) => setSearchCriteria(event.target.value)} className="py-2 px-4 bg-slate-100 border-2 rounded" name="filter" id="filter">
                                 <option value="name">Nome do produto</option>
                                 <option value="code">Código Ean</option>
@@ -203,14 +203,14 @@ export default function Search(){
                                 <tr className="flex-1">
                                     <th className="font-medium text-left pl-1 ">Código EAN</th>
                                     <th className="font-medium text-left pl-1 ">Nome</th>
-                                    <th className="font-medium text-left pl-1 ">Marca</th>
-                                    <th className="font-medium text-left pl-1 ">Data do Casdatro</th>
+                                    <th className="font-medium text-left pl-1 hidden sm:talbe-cell">Marca</th>
+                                    <th className="font-medium text-left pl-1 hidden sm:table-cell">Data do Casdatro</th>
                                     <th className="font-medium text-left pl-1">Preço</th>
                                     <th className="font-medium text-left pl-1">#</th>
                                 </tr>
                             </thead>
-                            <tbody >
-                                <tr className="border-b-2  border-b-slate-200 h-16 last:border-b-0 bg-slate-100 hover:bg-gray-200 duration-300">
+                            <tbody>
+                                <tr className="border-b-2  border-b-slate-200 h-16 last:border-b-0 bg-slate-100 hover:bg-gray-200 duration-300 ">
                                     <td className="text-left pl-1">
                                         {isEdit ? (
                                             <input
@@ -239,7 +239,7 @@ export default function Search(){
                                             editableProduct?.name
                                         )}
                                     </td>
-                                    <td className="text-left pl-1">
+                                    <td className="text-left pl-1 hidden sm:tabel-cell">
                                         {isEdit ? (
                                             <select 
                                                 name="brand" 
@@ -257,7 +257,7 @@ export default function Search(){
                                             editableProduct?.markName
                                         )}
                                     </td>
-                                    <td className="text-left pl-1">{product.createdAt && new Date(product.createdAt).toLocaleDateString("pt-BR")}</td>
+                                    <td className="text-left pl-1 hidden sm:table-cell">{product.createdAt && new Date(product.createdAt).toLocaleDateString("pt-BR")}</td>
                                     <td className="text-left pl-1">
                                     {isEdit ? (
                                             <input

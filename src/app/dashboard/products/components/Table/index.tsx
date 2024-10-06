@@ -121,7 +121,7 @@ export const Table = ({mark, product, marks}: ProductItem) => {
                     )}
                     
                 </td>
-                <td className="text-left pl-1 w-[111px] ">
+                <td className="text-left pl-1 w-[111px] hidden sm:table-cell">
                     {isEditing ? (
                         <select 
                             name="markId" 

@@ -36,7 +36,7 @@ export default async function Products(){
                         <tr className="flex-1">
                             <th className="font-medium text-left pl-1 ">Código EAN</th>
                             <th className="font-medium text-left pl-1 ">Nome</th>
-                            <th className="font-medium text-left pl-1 ">Marca</th>
+                            <th className="font-medium text-left pl-1 hidden sm:table-cell">Marca</th>
                             <th className="font-medium text-left pl-1 hidden sm:block">Data do Casdatro</th>
                             <th className="font-medium text-left pl-1">Preço</th>
                             <th className="font-medium text-left pl-1">#</th>

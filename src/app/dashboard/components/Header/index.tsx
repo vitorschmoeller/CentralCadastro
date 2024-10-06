@@ -1,7 +1,6 @@
 import { Container } from "@/components/Container"
 import Link from "next/link"
 import Image from "next/image"
-import prismaClient from "@/lib/prisma"
 import { getServerSession } from "next-auth"
 import { authOptions } from "@/lib/auth"
 export const DashboardHeader = async () => {
@@ -13,7 +12,7 @@ export const DashboardHeader = async () => {
     return(
         <Container>
             <header className="w-full bg-gray-900 my-4 p-3 rounded flex  items-center justify-between">
-                <div className="flex items-center gap-4 ">
+                <div className="flex items-center gap-4 flex-wrap">
                     <Link href="/dashboard" className="text-white hover:font-bold duration-300">
                         Chamados
                     </Link>
